@@ -5,7 +5,8 @@ const app = Vue.createApp({
             description: 'Nice time socks',
             image: './assets/images/socks_green.jpg',
             url: 'https://www.vuemastery.com/',
-            inStock: true
+            inventory: 0,
+            onSale: false
         }
     }
 })
