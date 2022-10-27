@@ -23,6 +23,8 @@
               <p v-else-if="inventory <= 10 && inventory > 0">Almost out</p>
               <p v-else>Out of stock</p>
 
+              <li v-for="size in sizes">{{ size }}</li>
+
               <a :href="url">Made by vue mastery</a>
               <p v-show="onSale">On Sale!</p>
 
@@ -30,7 +32,7 @@
                 <li v-for="detail in details">{{detail}}</li>
               </ul>
               <ul>
-                <!--solution-->
+                <li v-for="variant in variants" :key="variant.id">{{ variant.color }}</li>
               </ul>
 
             </div>
