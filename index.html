@@ -6,7 +6,7 @@
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
-    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
 
@@ -19,11 +19,20 @@
             </div>
             <div class="product-info">
               <h1>{{ product }}</h1>
-              <p v-if="inventory >10">In Stock</p>
-              <p v-else-if="inventory <= 10 && invetory > 0">Almost out</p>
+              <p v-if="inventory > 10">In Stock</p>
+              <p v-else-if="inventory <= 10 && inventory > 0">Almost out</p>
               <p v-else>Out of stock</p>
+
+              <a :href="url">Made by vue mastery</a>
               <p v-show="onSale">On Sale!</p>
-              <a :href="rdl">Made by vue mastery</a>
+
+              <ul>
+                <li v-for="detail in details">{{detail}}</li>
+              </ul>
+              <ul>
+                <!--solution-->
+              </ul>
+
             </div>
           </div>
         </div>
