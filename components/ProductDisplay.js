@@ -48,6 +48,11 @@ app.component('product-display',
 
       </div>
     </div>
+
+    <!-- Insert review form-->
+
+    <review-form></review-form>
+
   </div>`,
   data() {
     return {
