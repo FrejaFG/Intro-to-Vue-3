@@ -49,7 +49,7 @@ app.component('product-display',
       </div>
     </div>
 
-    <!-- Insert review form-->
+    <!-- Insert review list and form-->
 
     <review-list v-if="reviews.length" :reviews="reviews"></review-list>
 
