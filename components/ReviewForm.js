@@ -8,6 +8,7 @@ app.component('review-form', {
 
     <label for="review">Review:</label>      
     <textarea id="review" v-model="review"></textarea>
+
     <label for="rating">Rating:</label>
     <select id="rating" v-model.number="rating">
       <option>5</option>
@@ -32,14 +33,14 @@ app.component('review-form', {
     onSubmit() {
         let productReview = {
             name: this.name,
-            revew: this.revew,
+            review: this.review,
             rating: this.rating
         }
         this.$emit('review-submitted', productReview)
 
         this.name = ''
-        this.revew = ''
-        this.revew = null
+        this.review = ''
+        this.rating = null
     }
   }
 
