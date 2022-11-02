@@ -19,9 +19,9 @@ app.component('product-display',
         <p v-else>Out of Stock</p>
         <p>Shipping: {{ shipping }}</p>
         
-        <!-- solution -->
-        <product-details :details="details"></product-details>
-        <!-- solution -->
+        <ul>
+            <li v-for="detail in details"> {{detail}} </li>
+        </ul>
         <div 
           v-for="(variant, index) in variants" 
           :key="variant.id" 
@@ -89,7 +89,7 @@ methods: {
     {
         this.$emit('remove-from-cart', this.variants[this.selectedVariant].id)
     },
-    addReview()
+    addReview(review)
     {
         this.reviews.push(review)
     }
